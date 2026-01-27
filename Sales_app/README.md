@@ -57,6 +57,8 @@ python manage.py createsuperuser
 # Start the development server
 python manage.py runserver
 
+---
+
 ## API Endpoints
 
 ### Authentication
