@@ -7,7 +7,7 @@ A clean, modular Django REST API for managing customers and orders. Demonstrates
 ## Features
 
 - Modular apps per domain (`customers`, `orders`, `users`)
-- REST API endpoints with DRF
+- REST API endpoints with Django REST Framework (DRF)
 - JWT authentication (SimpleJWT)
 - Staff-only permissions for sensitive actions
 - Signals for order creation events
@@ -28,19 +28,22 @@ project_root/
 ├── requirements.txt
 └── README.md
 
-
 ---
 
 ## Installation
 
 ```bash
-# Clone repo
+# Clone the repository
 git clone https://github.com/yourusername/django-modular-rest-api.git
 cd django-modular-rest-api
 
-# Create virtual environment
+# Create a virtual environment
 python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+# Activate it
+# Linux/macOS:
+source venv/bin/activate
+# Windows:
+venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
@@ -48,13 +51,11 @@ pip install -r requirements.txt
 # Run migrations
 python manage.py migrate
 
-# Create superuser
+# Create a superuser
 python manage.py createsuperuser
 
-# Start server
+# Start the development server
 python manage.py runserver
-
----
 
 ## API Endpoints
 
@@ -105,4 +106,5 @@ python manage.py runserver
 
 ## Author
 
-**Faith Muronji** — Backend Engineer | Django | Junior-Cybersecurity-Engineer | DevSecOps
+**Faith Muronji** — Backend Engineer | Django | Junior Cybersecurity Engineer | DevSecOps
+
