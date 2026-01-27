@@ -1,3 +1,10 @@
-from django.shortcuts import render
+from rest_framework.viewsets import ModelViewSet
+from .models import Order
+from .serializers import OrderSerializer
+
+class OrderViewSet(ModelViewSet):
+    queryset = Order.objects.select_related('customer').order_by('-created_at')
+    serializer_class = OrderSerializer
+
 
 # Create your views here.
