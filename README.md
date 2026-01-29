@@ -14,6 +14,7 @@ A clean, modular Django REST API for managing customers and orders. Demonstrates
 - Optimized queries and filtering
 - Admin panel with customizations
 
+
 ---
 
 ## Project Structure
@@ -110,5 +111,5 @@ python manage.py runserver
 
 ## Author
 
-**Faith Muronji** — Backend Engineer | Django | Junior Cybersecurity Engineer | DevSecOps
+**Faith Muronji** — Backend Engineer | Django | Junior Cybersecurity Engineer
 
