@@ -19,15 +19,17 @@ A clean, modular Django REST API for managing customers and orders. Demonstrates
 
 ## Project Structure
 
+```text
 project_root/
-├── customers/ # Customer management
-├── orders/ # Order management & signals
-├── users/ # Authentication & JWT
-├── common/ # Shared utilities & permissions
-├── config/ # Django settings & URLs
+├── customers/      # Customer management
+├── orders/         # Order management & signals
+├── users/          # Authentication & JWT
+├── common/         # Shared utilities & permissions
+├── config/         # Django settings & URLs
 ├── manage.py
 ├── requirements.txt
 └── README.md
+```
 
 ---
 
