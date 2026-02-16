@@ -1,4 +1,6 @@
 from rest_framework.views import APIView
+
+from orders.services import fetch_and_save_external_orders
 from .models import Order
 from .serializers import OrderSerializer
 from rest_framework.response import Response
@@ -62,3 +64,14 @@ class OrderDetailView(APIView):
             return Response(status=status.HTTP_404_NOT_FOUND)
         order.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+    
+   
+class FetchExternalOrdersView(APIView):
+    permission_classes = [IsStaffOrReadOnly]
+    def get(self, request):
+        orders, error = fetch_and_save_external_orders()
+        if error:
+            return Response({"error": error}, status=status.HTTP_503_SERVICE_UNAVAILABLE)
+
+        serializer = OrderSerializer(orders, many=True)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
