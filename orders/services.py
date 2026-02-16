@@ -1,4 +1,3 @@
-# services.py
 import requests
 from decimal import Decimal
 from .models import Order
